@@ -74,3 +74,8 @@ for x in X_test:
 from sklearn.metrics import accuracy_score
 
 print(accuracy_score(y_out, y_test))
+
+import pickle
+file = open('model_file.sav', 'wb')
+pickle.dump(clf, file)
+file.close()
